@@ -1883,6 +1883,10 @@ Y.Loader.prototype = {
                     // Y.log('testing pattern ' + i);
                     p = patterns[pname];
                     
+                    if (p typeof == "string") {
+                        continue;
+                    }
+                    
                     //There is no test method, create a default one that tests
                     // the pattern against the mod name
                     if (!p.test) {
